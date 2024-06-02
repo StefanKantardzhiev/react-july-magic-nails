@@ -1,0 +1,11 @@
+.Login {
+    #login-submit {
+        width: 80%;
+        margin:auto;
+    }
+    #login-submit:hover{
+        background-color: rgb(236 175 154/0.8);
+        border: 1px solid white;
+        color:whitesmoke;
+    }
+}

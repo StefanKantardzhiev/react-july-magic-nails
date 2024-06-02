@@ -1,13 +1,271 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Dancing Script", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(250, 243, 231);
+  background-size: cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logo {
+  display: block;
+  float: left;
+  width: 30%;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}
+
+header {
+  display: block;
+  width: 100%;
+}
+
+.nav_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  float: right;
+  width: 70%;
+  margin: 0 10% auto;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.hero {
+  background-image: url("https://as2.ftcdn.net/v2/jpg/04/81/66/19/1000_F_481661950_DozZV5h8tZO87DN7W6pv0IyAIDRX9MzJ.jpg");
+  height: 50rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.title_container {
+  animation: slide-in-anim 2s ease-out;
+  float: right;
+  width: 30%;
+  margin: 10% 10% auto;
+}
+
+.title_container h2{
+  color:white;
+  font-size: 26px;
+}
+
+.title_container h1{
+  margin-top: -12%;
+}
+
+
+.title_container-left {
+  float: left;
+  padding: 20% 0 0 0;
+  margin: auto;
+  width: 40%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav ul li span{
+  cursor: pointer;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: #050505;
+}
+
+h1 {
+  font-size: 4em;
+  text-align: center;
+  color: #ffffff;
+}
+#not-found{
+  color: red;
+  font-size: 10em;
+  text-align: center;
+  text-shadow: #d9901d 1px 5px 1px;
+
+}
+#not-authorized{
+  color: red;
+  font-size: 10em;
+  text-align: center;
+  text-shadow: #d9901d 1px 5px 1px;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.main_wrapper_title {
+  float: right;
+  margin-right: 20%;
+  font-size: 2em;
+  text-align: center;
+  color: #050505;
+}
+
+.services {
+  margin: auto;
+}
+
+.services_container {
+  display: grid;
+  margin: 0 auto;
+  max-width: 80%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 4%;
+  padding: 2%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+.service {
+  display: block;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.815);
+  background-color: rgb(236 175 154);
+  border: 1px solid black;
+  border-radius: 90%;
+}
+
+.service h1{
+
+}
+
+.service p {
+  padding: 10%;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 0.5mm;
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* .service button {
+  padding: 1% 2%;
+  margin: 2em auto;
+  border-radius: 10px;
+  border: 1px transparent;
+  font-family: "Dancing Script";
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 25px;
+} */
+
+#logo {
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+
+/* .contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+} */
+
+form {
+  width: 20%;
+  margin: 0 auto;
+  padding: 2% 5%;
+  background-color: rgb(236 175 154);
+  border-radius: 20px;
+
+}
+
+/* form div {
+  margin-bottom: 15px;
+} */
+
+form label {
+  color: whitesmoke;
+  text-shadow: 1px 4px 7px black;
+  display: block;
+  margin-bottom: 2%;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+form input[type="text"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 20px;
+  margin: 3% 0;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: whitesmoke;
+  color: rgb(236 175 154);
+  border: 1px solid rgb(219, 161, 142);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+form button:hover {
+  background-color: rgb(40, 21, 70);
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+}
+
+footer {
+  display: block;
+  width: 100%;
+  height: 10%;
+  background-color: #f8f8f8;
+  padding: 2% 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+span.nav-title {
+  text-shadow: 2px 1px 20px rgba(0, 0, 0, 0.815);
+}
+
+
+@keyframes slide-in-anim {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
 }

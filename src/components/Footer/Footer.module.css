@@ -1,0 +1,15 @@
+.Footer {
+    padding: 2rem;
+    width: 10%;
+    margin: auto;
+}
+
+.Footer p {
+    text-align: center;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: larger;
+    text-shadow: 2px 1px 20px rgba(0, 0, 0, 0.815);
+}
