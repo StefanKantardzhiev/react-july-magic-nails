@@ -1,11 +1,12 @@
-export class RestAPI {
-    baseURL: string;
+import * as process from 'process';
 
-    constructor(baseURL: string) {
-        this.baseURL = baseURL;
-    }
+export class RestAPI {
+
+    // @ts-ignore
+    baseURL: string = process.env.REACT_APP_REST_API_URL;
 
     async get(endpoint: string): Promise<any> {
+        console.log(this.baseURL)
         const response = await fetch(`${this.baseURL}${endpoint}`,{
             method: 'GET',
             headers:{
@@ -52,6 +53,6 @@ export class RestAPI {
 
     // Similarly, you can add PUT, DELETE methods etc.
 }
-export const api = new RestAPI('http://localhost:3001');
+export const api = new RestAPI();
 
 // Usage

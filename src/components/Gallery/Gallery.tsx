@@ -8,6 +8,7 @@ const Gallery = () => {
    useEffect(() => {
       api.get('/files').then((data:any) => setImages(data));
   }, []);
+   console.log(images)
    return (
      <div>
         <section className="main-title-gallery">
