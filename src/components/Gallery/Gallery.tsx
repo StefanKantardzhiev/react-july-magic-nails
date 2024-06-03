@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {api} from "../../services/rest-api";
 import { PhotoProvider, PhotoView } from 'react-photo-view'
 import '../Gallery/Gallery.css'
-import process from 'process'
+import* as process from 'process'
 const Gallery = () => {
   const [images, setImages] = useState([]);
    useEffect(() => {
