@@ -13,7 +13,8 @@ const Gallery = () => {
      <div>
         <section className="main-title-gallery">
            <h1>Gallery</h1>
-           <section className="gallery">
+        </section>
+        <section className="gallery">
               <PhotoProvider>
                  {images.map((image: any, index) => (
 
@@ -26,7 +27,6 @@ const Gallery = () => {
                    </PhotoView>
                  ))}
               </PhotoProvider>
-           </section>
         </section>
      </div>
    )

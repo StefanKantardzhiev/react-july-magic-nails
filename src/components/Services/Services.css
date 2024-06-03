@@ -35,6 +35,21 @@
     transition: transform 0.3s ease-in-out;
 }
 
+
+.service-card .service-name {
+    display: block;
+    width: 50%;
+    font-size: 120px;
+    color: black;
+}
+
+.service-card .service-description {
+    padding:20px;
+    font-size:60px;
+    color: #333;
+    margin-top: 28rem;
+}
+
 .service-card:hover {
     transform: translateY(-10px);
 }
@@ -49,15 +64,14 @@
 .service-info {
     padding: 20px;
 }
-
-#service-name0{
+.service-card:nth-child(1) .service-name{
     display: block;
     width: 50%;
     font-size: 120px;
     color: black;
 }
 
-#service-name1{
+.service-card:nth-child(2) .service-name{
     display: block;
     width: 50%;
     margin-top: 35%;
@@ -66,7 +80,7 @@
     color: whitesmoke;
 }
 
-#service-name2{
+.service-card:nth-child(3) .service-name{
     display: block;
     width: 50%;
     margin-left: 20%;
@@ -75,20 +89,19 @@
     color: #333;
 }
 
-#service-description0{
+.service-card:nth-child(1) .service-description{
     padding:20px;
     font-size:60px;
     color: #333;
     margin-top: 28rem;
-
 }
 
-#service-description1{
+.service-card:nth-child(2) .service-description{
     font-size:32px;
     color:white;
 }
 
-#service-description2{
+.service-card:nth-child(3) .service-description{
     padding:20px;
     font-size:30px;
 }

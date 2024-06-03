@@ -28,7 +28,7 @@ function App() {
           <Route path="/services" element={<Services/>}/>
          </Routes>
       </Router>
-      {/*<Facebook/>*/}
+      <Facebook/>
       <Footer/>
     </div>
   );

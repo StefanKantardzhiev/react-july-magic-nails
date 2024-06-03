@@ -1,12 +1,15 @@
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap:2%;
-    margin: 2% auto;
+    display: flex;
+    width: 80%;
+    align-content: space-evenly;
+    margin: auto;
     padding: 2%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 25px;
-    width: 85%;
+    flex-wrap: wrap;
+
+    justify-content: center;
 }
 
 .main-title-gallery h1{
@@ -18,11 +21,11 @@
 
 
 .gallery img {
-    max-width: 90%;
-    height: 20em;
+    width: 250px;
+    height: 250px;
     display: block;
     filter: brightness(80%);
-    border-radius: 20px;
+    border-radius: 50px;
     padding: 2%;
 }
 

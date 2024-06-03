@@ -29,10 +29,10 @@ export const Services = () => {
                style={{backgroundImage: `url('${service.imageUrl}')`}} // Set background image dynamically
              >
                 <p className="service-description"
-                   id={'service-description'+index.toString()
-                }>{service.description}</p>
+                   id={'service-description'}
+                >{service.description}</p>
                 <h2 className="service-name"
-                    id={'service-name'+index.toString()
+                    id={'service-name'
                 }>{service.name}</h2>
              </div>
            ))}
