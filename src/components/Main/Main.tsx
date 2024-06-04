@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Mailjet from "node-mailjet";
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { api } from '../../services/rest-api';
 import * as process from 'process'
@@ -21,43 +20,17 @@ const Main = () => {
     const titleString = title.trim();
     const messageString = message.trim();
     const serviceTypeString = serviceType.trim();
-    const mailjet = new Mailjet({
-      apiKey: process.env.JET_MAIL_API_KEY,
-      apiSecret: process.env.JET_MAIL_SECRET_KEY
-    });
-    console.log(mailjet)
 
-    try {
-      await mailjet
-        .post('https://api.mailjet.com/v3.1/send')
-        .request({
-          Messages: [
-            {
-              From: {
-                Email: "pilot@mailjet.com",
-                Name: "Mailjet Pilot"
-              },
-              To: [
-                {
-                  Email: "passenger1@mailjet.com",
-                  Name: "passenger 1"
-                }
-              ],
-              Subject: "Your email flight plan!",
-              TextPart: "Dear passenger 1, welcome to Mailjet! May the delivery force be with you!",
-              HTMLPart: "<h3>Dear passenger 1, welcome to <a href=\"https://www.mailjet.com/\">Mailjet</a>!</h3><br />May the delivery force be with you!"
-            }
-          ]
-        }).then((result)=>{
-          console.log(result.body)
-        }).catch((err)=>{
-          console.log(err)
-        })
-    } catch (error) {
-      console.log(error)
+    if (!emailString || !titleString || !messageString || !serviceTypeString) {
+      alert('Моля попълнете всички полета!');
+      return;
     }
-
-    console.log(emailString, titleString, messageString, serviceTypeString);
+         api.post('/email', {email: emailString, title: titleString, message: messageString, serviceType: serviceTypeString}).then(data => {
+        console.log(data);
+        alert('Вашето запитване беше изпратено успешно!');
+       }).catch(err => {
+        console.log(err);
+         });
   };
 
   return (
@@ -122,7 +95,7 @@ const Main = () => {
           </div>
         </div>
       </section>
-      <h1 className="main-title">Latest Designs</h1>
+      <h1 className="main-title">Най-нови дизайни</h1>
       <section className="gallery">
         <PhotoProvider>
           {images.slice(0,8).map((image: any, index) => (
@@ -138,7 +111,7 @@ const Main = () => {
         </PhotoProvider>
       </section>
       <h1 className="main-title" id="contact">
-        Contact Us
+        Контакт
       </h1>
       <form onSubmit={(ev) => onSubmit(ev)}>
         <div>
@@ -151,7 +124,7 @@ const Main = () => {
           />
         </div>
         <div>
-          <label htmlFor="title">Title:</label>
+          <label htmlFor="title">Име:</label>
           <input
             type="text"
             id="title"
@@ -160,7 +133,7 @@ const Main = () => {
           />
         </div>
         <div>
-          <label htmlFor="message">Message:</label>
+          <label htmlFor="message">Съобщение:</label>
           <textarea
             id="message"
             value={message}
@@ -168,7 +141,7 @@ const Main = () => {
           ></textarea>
         </div>
         <div>
-          <label htmlFor="serviceType">Type of Service:</label>
+          <label htmlFor="serviceType">Услуга:</label>
           <select
             id="serviceType"
             onChange={(ev) => setServiceType(ev.target.value)}
@@ -179,7 +152,7 @@ const Main = () => {
             <option value="Design">Design</option>
           </select>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">Изпрати запитване до July Nails</button>
       </form>
     </div>
   );

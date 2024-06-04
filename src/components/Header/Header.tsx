@@ -23,7 +23,7 @@ const Header = () => {
         <div className="nav_wrapper">
           <div className="logo">
             <img
-              src="https://i.ibb.co/KzZStJ5/removal-ai-f86f7e63-04d9-4316-abd3-d39efc84c344-julias.png"
+              src={process.env.LOGO}
               alt="logo"
               id="logo"
             />
@@ -34,43 +34,43 @@ const Header = () => {
                 <ul>
                 <li>
                 <span className="nav-title">
-                  <a href="/">Home</a>
+                  <a href="/">Начало</a>
                 </span>
                 </li>
                 <li>
                 <span className="nav-title">
-                  <a href="/services">Services</a>
+                  <a href="/services">Услуги</a>
                 </span>
                 </li>
                 <li>
                 <span className="nav-title">
-                  <a href="/gallery">Gallery</a>
+                  <a href="/gallery">Галерия</a>
                 </span>
                 </li>
                 <li>
-                  <a href="/" onClick={logout}>Logout</a>
+                  <a href="/" onClick={logout}>Отписване</a>
                 </li>
               </ul>
             </nav> : <nav className="nav">
               <ul>
                 <li>
                 <span className="nav-title">
-                  <a href="/">Home</a>
+                  <a href="/">Начало</a>
                 </span>
                 </li>
                 <li>
                 <span className="nav-title">
-                  <a href="/services">Services</a>
+                  <a href="/services">Услуги</a>
                 </span>
                 </li>
                 <li>
                 <span className="nav-title">
-                  <a href="/gallery">Gallery</a>
+                  <a href="/gallery">Галерия</a>
                 </span>
                 </li>
                 <li>
                 <span className="nav-title">
-                  <span onClick={(e: any) => scroll(e)}>Contact</span>
+                  <span onClick={(e: any) => scroll(e)}>Контакт</span>
                 </span>
                 </li>
               </ul>

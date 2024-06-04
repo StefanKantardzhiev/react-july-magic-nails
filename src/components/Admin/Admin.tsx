@@ -44,7 +44,7 @@ const Admin = () => {
         return (
           <div className="Admin">
              <section className='main-title'>
-                <h1>Admin Panel</h1>
+                <h1>Админ панел</h1>
              </section>
              <section className="admin-options">
                 <ul>
@@ -59,7 +59,7 @@ const Admin = () => {
                   <section>
                      <div className="grid-container">
                         <div className="grid-item">
-                           <h2>Manage Services</h2>
+                           <h2>Управление на услуги</h2>
                            {services.map((service: any) => {
                               return (
                                 <div className="grid-item" key={service._id}>
@@ -69,7 +69,7 @@ const Admin = () => {
                            })}
                         </div>
                         <div className="grid-item">
-                           <h2>Description</h2>
+                           <h2>Обозначение</h2>
                            {services.map((service: any) => {
                               return (
                                 <div className="grid-item" key={service._id}>
@@ -79,17 +79,17 @@ const Admin = () => {
                            })}
                         </div>
                         <div className="grid-item">
-                           <h2>Price</h2>
+                           <h2>ЦЕНА</h2>
                            {services.map((service: any) => {
                               return (
                                 <div className="grid-item" key={service._id}>
-                                   <p>{service.price} EURO</p>
+                                   <p>{service.price} ЕВРО</p>
                                 </div>
                               );
                            })}
                         </div>
                         <div className="grid-item">
-                           <h2>Update / Delete</h2>
+                           <h2>Поднови / Изтрий</h2>
                            {services.map((service: any) => {
                               return (
                                 <div className="grid-item" key={service._id}>
@@ -114,7 +114,7 @@ const Admin = () => {
                   <section>
                      <div className="grid-container">
                         <div className="grid-item">
-                           <h2>Manage Gallery</h2>
+                           <h2>Управлявай Галерия</h2>
                            {services.map((image: any) => {
                               return (
                                 <div className="grid-item" key={image._id}>
@@ -124,7 +124,7 @@ const Admin = () => {
                            })}
                         </div>
                         <div className="grid-item">
-                           <h2>Manage Services</h2>
+                           <h2>Управлявай Услуги</h2>
                            {services.map((image: any) => {
                               return (
                                 <div className="grid-item" key={image._id}>
@@ -134,7 +134,7 @@ const Admin = () => {
                            })}
                         </div>
                         <div className="grid-item">
-                           <h2>Manage Orders</h2>
+                           <h2>Управлявай Запитвания</h2>
                            {services.map((image: any) => {
                               return (
                                 <div className="grid-item" key={image._id}>

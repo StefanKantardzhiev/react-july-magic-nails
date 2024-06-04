@@ -8,11 +8,10 @@ const Gallery = () => {
    useEffect(() => {
       api.get('/files').then((data:any) => setImages(data));
   }, []);
-   console.log(images)
    return (
      <div>
         <section className="main-title-gallery">
-           <h1>Gallery</h1>
+           <h1>Галерия</h1>
         </section>
         <section className="gallery">
               <PhotoProvider>
@@ -23,7 +22,7 @@ const Gallery = () => {
                    >
                       {index < images.length ? (
                         <img src={`${process.env.REACT_APP_REST_API_URL}/files/${image._id}`} alt="ss"/>
-                      ) : <h1>No Images</h1>}
+                      ) : <h1>Няма намерени картини :( </h1>}
                    </PhotoView>
                  ))}
               </PhotoProvider>

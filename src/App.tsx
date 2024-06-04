@@ -17,7 +17,8 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Router>
+       <Facebook/>
+       <Router>
          <Routes>
           <Route path="/" element={<Main/>}/>
           <Route path="/about" element={<About/>}/>
@@ -28,7 +29,6 @@ function App() {
           <Route path="/services" element={<Services/>}/>
          </Routes>
       </Router>
-      <Facebook/>
       <Footer/>
     </div>
   );

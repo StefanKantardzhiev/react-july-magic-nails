@@ -77,7 +77,7 @@ const AdminAdminGallery = () => {
       <div className="Admin-Gallery">
         <section>
           <div className="admin-grid-container">
-            <h2 id={'gallery-title'}>Images Gallery</h2>
+            <h2 id={'gallery-title'}>Галерия на админ</h2>
             {images.map((image: any,index) => (
               <section key={image._id} className="admin-gallery">
                 <PhotoProvider>
@@ -102,11 +102,11 @@ const AdminAdminGallery = () => {
           </div>
         </section>
         <section id="upload">
-          <button onClick={handleUploadClick}>Upload</button>
+          <button onClick={handleUploadClick}>Качи</button>
           {showModal && (
             <div className="modal">
             <input type="file" onChange={handleFileUpload} />
-              <button onClick={handleClose}>Close</button>
+              <button onClick={handleClose}>Затвори</button>
             </div>
           )}
         </section>
