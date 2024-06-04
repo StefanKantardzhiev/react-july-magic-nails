@@ -38,16 +38,16 @@ const Main = () => {
       <section className="hero">
         <div className="title_container">
           <h1>July's Magic Nail Studio</h1>
-          <h2>
-            Julia Nails Studio is a nail salon located in the heart of the city
-            of Monchengladbach. <br/>
-            We specialize in manicures, pedicures, and nail design. Our goal is
-            to provide a relaxing and enjoyable experience for all of our
-            clients. We offer a variety of services including gel manicures,
-            acrylic nails, and nail art. Our staff is friendly and professional,
-            and we strive to make your visit as pleasant as possible.
+          <h2>July's Magic Nail Studio е салон за маникюр, разположен в град
+            Essen в моят домашен салон. <br/>
+           Аз специализирам в маникюри, педикюри и дизайн на нокти. Моята цел е да осигуря
+            релаксиращо и приятно изживяване за всички наши клиенти. Предлагаме разнообразие от
+            услуги, включително гел маникюр, акрилни нокти и изкуство на ноктите. Аз съм
+            дружелюбна и социална личност, както и добър професионалист,затова се стремя да направя вашето посещение възможно
+            най-приятно.
           </h2>
-          <h2>We look forward to seeing you soon!</h2>
+          <h2>Очакваме с нетърпение да ви видим скоро!</h2>
+
         </div>
       </section>
       <section className="services">
