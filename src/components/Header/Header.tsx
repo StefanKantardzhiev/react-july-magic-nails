@@ -1,5 +1,6 @@
 import React from 'react'
 import { isAdmin } from '../middleware/auth-middleware'
+import * as process from "process";
 const Header = () => {
   let userToParse:any|null=localStorage.getItem('user');
   let user= JSON.parse(userToParse);
@@ -23,7 +24,7 @@ const Header = () => {
         <div className="nav_wrapper">
           <div className="logo">
             <img
-              src={process.env.LOGO}
+              src='https://api-july-nails.vercel.app/files/665f9af2fa31bb5a2d76c517'
               alt="logo"
               id="logo"
             />
