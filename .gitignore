@@ -8,7 +8,7 @@
 .env.json
 src/.env.json
 src/.env
-
+./react-messenger-customer-chat
 # testing
 /coverage
 

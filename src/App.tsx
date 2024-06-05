@@ -11,13 +11,11 @@ import Gallery from './components/Gallery/Gallery'
 import Admin from './components/Admin/Admin'
 import Login from "./components/Login/Login";
 import {Services} from "./components/Services/Services";
-import Facebook from "./components/Facebook/Facebook";
 
 function App() {
   return (
     <div className="App">
       <Header/>
-       <Facebook/>
        <Router>
          <Routes>
           <Route path="/" element={<Main/>}/>
