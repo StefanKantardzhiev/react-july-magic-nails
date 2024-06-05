@@ -20,7 +20,7 @@ export const Services = () => {
 
    return (
      <section className="services">
-        <h1 className="services-title">Our Services</h1>
+        <h1 className="services-title">Услуги</h1>
         <div className="services-grid">
            {services.map((service:any,index) => (
              <div

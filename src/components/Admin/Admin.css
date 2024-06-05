@@ -6,7 +6,9 @@
 }
 
 .main-title{
-    text-shadow: 2px 1px 20px rgba(0, 0, 0, 0.815);
+    color: rgb(250, 176, 152);
+    font-size: 5em;
+    text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.815);
 }
 
 .admin-options ul {

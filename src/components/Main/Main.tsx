@@ -38,41 +38,31 @@ const Main = () => {
       <section className="hero">
         <div className="title_container">
           <h1>July's Magic Nail Studio</h1>
-          <h2>July's Magic Nail Studio е салон за маникюр, разположен в град
-            Essen в моят домашен салон. <br/>
-           Аз специализирам в маникюри, педикюри и дизайн на нокти. Моята цел е да осигуря
-            релаксиращо и приятно изживяване за всички наши клиенти. Предлагаме разнообразие от
+          <h2>July's Magic Nail Studio е моят домашен салон, разположен в град
+            Essen. <br/>
+            Аз специализирам в маникюри, педикюри и дизайн на нокти. Моята цел е да осигуря
+            релаксиращо и приятно изживяване за всички наши клиенти. Предлагам разнообразие от
             услуги, включително гел маникюр, акрилни нокти и изкуство на ноктите. Аз съм
             дружелюбна и социална личност, както и добър професионалист,затова се стремя да направя вашето посещение възможно
             най-приятно.
           </h2>
-          <h2>Очакваме с нетърпение да ви видим скоро!</h2>
-
+          <h2>Очаквам с нетърпение да се видим !</h2>
         </div>
       </section>
       <section className="services">
         <div className="services_container">
           <div className="service">
-            <h1>Manicure</h1>
+            <h1>Маникюр</h1>
             <p>
-              Our manicures are designed to give you the perfect look for any
-              occasion. We offer a variety of manicure services, including gel
-              manicures, acrylic nails, and nail art. Our manicurists are
-              trained in the latest techniques to ensure that your nails look
-              their best.
+              Нашите маникюри са създадени, за да ви осигурят перфектния външен вид за всеки
+              повод.
             </p>
-            {/* <button onClick={() => setServiceType('Manicure')}>
-             Reserve now!
-             </button> */}
           </div>
           <div className="service">
-            <h1>Pedicure</h1>
+            <h1>Педикюр</h1>
             <p>
-              Our manicures are designed to give you the perfect look for any
-              occasion. We offer a variety of manicure services, including gel
-              manicures, acrylic nails, and nail art. Our manicurists are
-              trained in the latest techniques to ensure that your nails look
-              their best.
+              Нашите педикюри предлагат класически, гел и
+              SPA процедури за перфектна грижа и хидратация на краката ви.
             </p>
             {/* <div className="reserve-btn">
              <button>
@@ -81,13 +71,9 @@ const Main = () => {
              </div> */}
           </div>
           <div className="service">
-            <h1>Design</h1>
+            <h1>Дизайн</h1>
             <p>
-              Our manicures are designed to give you the perfect look for any
-              occasion. We offer a variety of manicure services, including gel
-              manicures, acrylic nails, and nail art. Our manicurists are
-              trained in the latest techniques to ensure that your nails look
-              their best.
+              Нашите услуги за дизайн на нокти включват иновативни и персонализирани решения, които подчертават вашата индивидуалност.
             </p>
             {/* <button onClick={() => setServiceType('Design')}>
              Reserve now!
@@ -95,7 +81,7 @@ const Main = () => {
           </div>
         </div>
       </section>
-      <h1 className="main-title">Най-нови дизайни</h1>
+      <h1 className="main-title">Последни дизайни</h1>
       <section className="gallery">
         <PhotoProvider>
           {images.slice(0,8).map((image: any, index) => (
