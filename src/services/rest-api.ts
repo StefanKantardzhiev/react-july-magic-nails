@@ -11,7 +11,6 @@ export class RestAPI {
             method: 'GET',
             headers:{
                 'token': localStorage.getItem('token') || '',
-                'Content-Type': 'application/json'
             }
     });
         return response.json();

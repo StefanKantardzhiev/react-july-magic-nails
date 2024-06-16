@@ -6,8 +6,8 @@ export const Services = () => {
 
    let[services,setServices] = useState([])
    useEffect(() => {
-     getServices().then(r => {
-        return r;
+     getServices().then((service:any )=> {
+        setServices(service)
      })
    }, []);
 

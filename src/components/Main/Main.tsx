@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { api } from '../../services/rest-api';
-import * as process from 'process'
 
 const Main = () => {
   const [images, setImages] = useState([]);
@@ -9,7 +8,7 @@ const Main = () => {
   const [title, setTitle] = useState('');
   const [message, setMessage] = useState('');
   const [serviceType, setServiceType] = useState('');
-
+let url = api.baseURL;
   useEffect(() => {
     api.get('/files').then(data => setImages(data));
   }, []);
@@ -87,11 +86,12 @@ const Main = () => {
           {images.slice(0,8).map((image: any, index) => (
             <PhotoView
               key={index}
-              src={process.env.REACT_APP_REST_API_URL + '/files/' + image?._id}
+              src={url + '/files/' + image?._id}
             >
               {index < images.length ? (
-                <img src={process.env.REACT_APP_REST_API_URL + '/files/' + image?._id} alt=""/>
-              ) : undefined}
+                  <img src={url + '/files/' + image?._id} alt={image._id}></img>)
+               : <h1>Няма намерени картини :( </h1>
+              }
             </PhotoView>
           ))}
         </PhotoProvider>

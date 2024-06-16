@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import {api} from "../../services/rest-api";
 import { PhotoProvider, PhotoView } from 'react-photo-view'
 import '../Gallery/Gallery.css'
-import* as process from 'process'
 const Gallery = () => {
   const [images, setImages] = useState([]);
    useEffect(() => {
       api.get('/files').then((data:any) => setImages(data));
   }, []);
+   let url = api.baseURL;
    return (
      <div>
         <section className="main-title-gallery">
@@ -21,7 +21,7 @@ const Gallery = () => {
                      key={index}
                    >
                       {index < images.length ? (
-                        <img src={`${process.env.REACT_APP_REST_API_URL}/files/${image._id}`} alt="ss"/>
+                        <img src={`${url}/files/${image._id}`} alt={image.id}/>
                       ) : <h1>Няма намерени картини :( </h1>}
                    </PhotoView>
                  ))}

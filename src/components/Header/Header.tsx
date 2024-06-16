@@ -1,6 +1,5 @@
 import React from 'react'
 import { isAdmin } from '../middleware/auth-middleware'
-import * as process from "process";
 const Header = () => {
   let userToParse:any|null=localStorage.getItem('user');
   let user= JSON.parse(userToParse);
